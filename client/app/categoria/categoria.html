@@ -1,0 +1,56 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+Lista de Categorias
+<div class="container">
+	<div class="row">
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          
+          <th>Id</th>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="cosa in categorias">
+         <td>{{cosa._id}}</td>
+          <td>{{cosa.nombre_categoria}}</td>
+          
+          
+          <td><md-button aria-label="sosi" class="md-raised md-primary" ng-click="deletecategoria(cosa)"><i class="fa fa-trash-o "></i></md-button></td>
+        </tr>
+      </tbody>
+    </table>
+	</div>
+</div>
+
+
+
+
+
+  
+ <form class="thing-form ">
+    <label>Ingreso</label>
+   <div class="row">
+    <div class="col-md-6">
+    <div class="input-group">
+    	<div class="input-group-addon" >Titulo</div>
+      <input type="text" class="form-control" placeholder="Titulo" ng-model="categoria.nombre_categoria" >
+
+    </div>
+   
+  </div>
+  </div>
+  </form>
+
+   <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" ng-click="addcategoria(categoria)">Agregar</button>
+      </span>
+    </div>
+</div>
+</li>
+<footer class="footer">
+  <div class="container">
+    
+  </div>
+</footer>
